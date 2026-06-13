@@ -7,6 +7,13 @@ export type GalleryItem = {
 
 export const orientationGallery: GalleryItem[] = [
   {
+    number: '01',
+    title: 'Secure access',
+    caption:
+      'Role-based access point for students and Psychology staff using fictional demonstration data.',
+    assetPath: '/assets/projects/orientacion-vocacional/01-login-demo.png',
+  },
+  {
     number: '02',
     title: 'Psychology dashboard',
     caption: 'Work view for assessment tracking and management.',
@@ -70,7 +77,7 @@ export const orientationGallery: GalleryItem[] = [
   {
     number: '11',
     title: 'Responsive mobile',
-    caption: 'Placeholder for reviewing the student mobile experience.',
+    caption: 'Mobile view of the student experience using demonstration data.',
     assetPath:
       '/assets/projects/orientacion-vocacional/11-home-estudiante-responsive-mobile.png',
   },

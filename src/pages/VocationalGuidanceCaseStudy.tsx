@@ -167,7 +167,7 @@ export default function VocationalGuidanceCaseStudy() {
             <div className="container">
               <SectionHeading
                 eyebrow="Gallery"
-                title="Screenshot placeholders"
+                title="Product walkthrough"
               />
               <ScreenshotGallery items={orientationGallery} />
             </div>
