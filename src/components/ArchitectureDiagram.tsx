@@ -1,8 +1,14 @@
-export default function ArchitectureDiagram() {
-  const layers = ['Frontend: React + TypeScript', 'REST API: .NET', 'SQL Server']
+type ArchitectureDiagramProps = {
+  ariaLabel: string
+  layers: string[]
+}
 
+export default function ArchitectureDiagram({
+  ariaLabel,
+  layers,
+}: ArchitectureDiagramProps) {
   return (
-    <div className="architecture" aria-label="High-level architecture">
+    <div className="architecture" aria-label={ariaLabel}>
       {layers.map((layer, index) => (
         <div className="architecture-step" key={layer}>
           <div>{layer}</div>

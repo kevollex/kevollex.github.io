@@ -1,11 +1,12 @@
 type PrivacyNoticeProps = {
+  label: string
   children: string
 }
 
-export default function PrivacyNotice({ children }: PrivacyNoticeProps) {
+export default function PrivacyNotice({ label, children }: PrivacyNoticeProps) {
   return (
     <aside className="privacy-notice">
-      <strong>Privacy notice</strong>
+      <strong>{label}</strong>
       <p>{children}</p>
     </aside>
   )

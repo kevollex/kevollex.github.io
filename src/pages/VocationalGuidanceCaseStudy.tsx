@@ -1,56 +1,29 @@
 import { Link } from 'react-router-dom'
 import ArchitectureDiagram from '../components/ArchitectureDiagram'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 import PrivacyNotice from '../components/PrivacyNotice'
 import RevealOnScroll from '../components/RevealOnScroll'
 import ScreenshotGallery from '../components/ScreenshotGallery'
 import SectionHeading from '../components/SectionHeading'
-import { orientationGallery } from '../data/orientationGallery'
-
-const stack = [
-  '.NET 10',
-  'React',
-  'TypeScript',
-  'Vite',
-  'SQL Server',
-  'Docker Compose',
-  'Caddy',
-  'JWT',
-]
-
-const features = [
-  'role-based authentication',
-  'assessment management',
-  'course-level tracking',
-  'student profiles',
-  'results and visual analysis',
-  'Excel exports',
-  'private PDF documents',
-  'responsive student experience',
-]
-
-const complements = [
-  'JWT authentication',
-  'Private PDF storage',
-  'Docker deployment',
-]
+import { useLanguage } from '../i18n/useLanguage'
 
 export default function VocationalGuidanceCaseStudy() {
+  const { t } = useLanguage()
+  const caseStudy = t.caseStudy
+
   return (
     <>
+      <Navbar />
       <main className="case-page">
         <section className="case-hero">
           <div className="container">
             <Link className="back-link" to="/">
-              Back to portfolio
+              {caseStudy.back}
             </Link>
-            <p className="eyebrow">Case study</p>
-            <h1>Vocational Guidance Platform</h1>
-            <p>
-              Web platform developed to digitize the vocational guidance
-              process, making it easier to administer assessments, track
-              students and manage results for the Psychology department.
-            </p>
+            <p className="eyebrow">{caseStudy.label}</p>
+            <h1>{caseStudy.title}</h1>
+            <p>{caseStudy.summary}</p>
           </div>
         </section>
 
@@ -58,20 +31,12 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section">
             <div className="container case-grid">
               <article className="case-card">
-                <h2>Problem</h2>
-                <p>
-                  The vocational guidance process needed a web solution to
-                  organize assessments, students, results and documents more
-                  clearly for internal review.
-                </p>
+                <h2>{caseStudy.problem.title}</h2>
+                <p>{caseStudy.problem.body}</p>
               </article>
               <article className="case-card">
-                <h2>Solution</h2>
-                <p>
-                  The solution was a full stack platform with differentiated
-                  flows, assessment management, course-level tracking and
-                  results available through a responsive interface.
-                </p>
+                <h2>{caseStudy.solution.title}</h2>
+                <p>{caseStudy.solution.body}</p>
               </article>
             </div>
           </section>
@@ -81,16 +46,11 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section muted-section">
             <div className="container two-column">
               <SectionHeading
-                eyebrow="My contribution"
-                title="Full stack implementation"
+                eyebrow={caseStudy.contribution.label}
+                title={caseStudy.contribution.title}
               />
               <div className="content-block">
-                <p>
-                  I designed and implemented a full stack solution with
-                  role-based authentication, assessment management, course-level
-                  tracking, results visualization, Excel exports and private PDF
-                  document storage.
-                </p>
+                <p>{caseStudy.contribution.body}</p>
               </div>
             </div>
           </section>
@@ -99,9 +59,12 @@ export default function VocationalGuidanceCaseStudy() {
         <RevealOnScroll>
           <section className="section">
             <div className="container">
-              <SectionHeading eyebrow="Stack" title="Technology stack" />
+              <SectionHeading
+                eyebrow={caseStudy.stack.label}
+                title={caseStudy.stack.title}
+              />
               <ul className="tag-list large-tags">
-                {stack.map((item) => (
+                {caseStudy.stack.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -113,12 +76,15 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section muted-section">
             <div className="container architecture-grid">
               <SectionHeading
-                eyebrow="Architecture"
-                title="High-level architecture"
+                eyebrow={caseStudy.architecture.label}
+                title={caseStudy.architecture.title}
               />
-              <ArchitectureDiagram />
+              <ArchitectureDiagram
+                ariaLabel={caseStudy.architecture.aria}
+                layers={[...caseStudy.architecture.layers]}
+              />
               <ul className="complement-list">
-                {complements.map((item) => (
+                {caseStudy.architecture.complements.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -130,11 +96,11 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section">
             <div className="container">
               <SectionHeading
-                eyebrow="Features"
-                title="Core scope"
+                eyebrow={caseStudy.features.label}
+                title={caseStudy.features.title}
               />
               <ul className="feature-grid">
-                {features.map((feature) => (
+                {caseStudy.features.items.map((feature) => (
                   <li key={feature}>{feature}</li>
                 ))}
               </ul>
@@ -146,17 +112,11 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section muted-section">
             <div className="container case-grid">
               <article className="case-card">
-                <h2>Technical challenges</h2>
-                <p>
-                  Separating responsibilities across the interface, API, data
-                  layer and private documents while maintaining a clear
-                  experience for different user profiles.
-                </p>
+                <h2>{caseStudy.challenges.title}</h2>
+                <p>{caseStudy.challenges.body}</p>
               </article>
-              <PrivacyNotice>
-                The source code and operational data remain private due to
-                confidentiality requirements. Public screenshots use fictional
-                demonstration data exclusively.
+              <PrivacyNotice label={caseStudy.privacy.label}>
+                {caseStudy.privacy.body}
               </PrivacyNotice>
             </div>
           </section>
@@ -166,10 +126,13 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section">
             <div className="container">
               <SectionHeading
-                eyebrow="Gallery"
-                title="Product walkthrough"
+                eyebrow={caseStudy.gallery.label}
+                title={caseStudy.gallery.title}
               />
-              <ScreenshotGallery items={orientationGallery} />
+              <ScreenshotGallery
+                items={t.gallery}
+                fallbackText={caseStudy.gallery.fallback}
+              />
             </div>
           </section>
         </RevealOnScroll>

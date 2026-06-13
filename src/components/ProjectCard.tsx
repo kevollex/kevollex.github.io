@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
-import type { Project } from '../data/projects'
+import type { ProjectTranslation } from '../i18n/translations'
 
 type ProjectCardProps = {
-  project: Project
+  project: ProjectTranslation
+  stackLabel: string
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, stackLabel }: ProjectCardProps) {
   return (
     <article className="project-card">
       <div>
@@ -14,7 +15,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p>{project.description}</p>
       </div>
 
-      <ul className="tag-list" aria-label={`${project.title} stack`}>
+      <ul className="tag-list" aria-label={`${project.title} ${stackLabel}`}>
         {project.stack.map((item) => (
           <li key={item}>{item}</li>
         ))}

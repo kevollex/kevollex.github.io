@@ -1,6 +1,6 @@
 type SkillGroupProps = {
   title: string
-  skills: string[]
+  skills: readonly string[]
 }
 
 export default function SkillGroup({ title, skills }: SkillGroupProps) {

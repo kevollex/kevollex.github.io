@@ -1,11 +1,15 @@
 import { useState } from 'react'
-import type { GalleryItem } from '../data/orientationGallery'
+import type { GalleryTranslation } from '../i18n/translations'
 
 type ScreenshotGalleryProps = {
-  items: GalleryItem[]
+  items: readonly GalleryTranslation[]
+  fallbackText: string
 }
 
-export default function ScreenshotGallery({ items }: ScreenshotGalleryProps) {
+export default function ScreenshotGallery({
+  items,
+  fallbackText,
+}: ScreenshotGalleryProps) {
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set())
 
   const markImageAsFailed = (assetPath: string) => {
@@ -34,7 +38,7 @@ export default function ScreenshotGallery({ items }: ScreenshotGalleryProps) {
                   >
                     <span>{item.number}</span>
                     <strong>{item.title}</strong>
-                    <small>Screenshot unavailable</small>
+                    <small>{fallbackText}</small>
                   </div>
                 ) : (
                   <img

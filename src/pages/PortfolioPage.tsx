@@ -4,9 +4,12 @@ import ProjectCard from '../components/ProjectCard'
 import RevealOnScroll from '../components/RevealOnScroll'
 import SectionHeading from '../components/SectionHeading'
 import SkillGroup from '../components/SkillGroup'
-import { featuredProjects, skillGroups, technologies } from '../data/projects'
+import { useLanguage } from '../i18n/useLanguage'
 
 export default function PortfolioPage() {
+  const { t } = useLanguage()
+  const emailHref = `mailto:${t.shared.email}`
+
   return (
     <>
       <Navbar />
@@ -14,21 +17,18 @@ export default function PortfolioPage() {
         <section className="hero-section">
           <div className="container hero-layout">
             <div className="hero-copy">
-              <p className="eyebrow">La Paz, Bolivia · Frontend · Full Stack</p>
-              <h1>Kevin Herrera Oropeza</h1>
-              <p className="hero-subtitle">
-                Systems Engineer and Software Developer.
-              </p>
+              <p className="eyebrow">{t.home.hero.metadata}</p>
+              <h1>{t.home.hero.title}</h1>
+              <p className="hero-subtitle">{t.home.hero.subtitle}</p>
               <p className="hero-description">
-                I build modern web solutions with TypeScript, React and .NET,
-                combining thoughtful interfaces with a solid technical foundation.
+                {t.home.hero.description}
               </p>
-              <div className="hero-actions" aria-label="Primary actions">
+              <div className="hero-actions" aria-label={t.home.hero.actionsAria}>
                 <a className="button primary" href="#proyectos">
-                  View projects
+                  {t.home.hero.projectsCta}
                 </a>
                 <a className="button secondary" href="#sobre-mi">
-                  About me
+                  {t.home.hero.aboutCta}
                 </a>
               </div>
             </div>
@@ -47,10 +47,10 @@ export default function PortfolioPage() {
           <section className="section compact-section" aria-labelledby="tecnologias">
             <div className="container">
               <h2 id="tecnologias" className="sr-only">
-                Technologies
+                {t.home.technologiesLabel}
               </h2>
               <ul className="tech-strip">
-                {technologies.map((technology) => (
+                {t.shared.technologies.map((technology) => (
                   <li key={technology}>{technology}</li>
                 ))}
               </ul>
@@ -61,14 +61,12 @@ export default function PortfolioPage() {
         <RevealOnScroll>
           <section className="section" id="sobre-mi">
             <div className="container two-column">
-              <SectionHeading eyebrow="About" title="Professional profile" />
+              <SectionHeading
+                eyebrow={t.home.about.label}
+                title={t.home.about.title}
+              />
               <div className="content-block">
-                <p>
-                  I am a Systems Engineer and software developer with a frontend
-                  and full stack focus. I have experience building web solutions
-                  and I am interested in thoughtful interfaces, useful
-                  applications and products with a clear technical foundation.
-                </p>
+                <p>{t.home.about.body}</p>
               </div>
             </div>
           </section>
@@ -77,12 +75,12 @@ export default function PortfolioPage() {
         <RevealOnScroll>
           <section className="section muted-section" id="experiencia">
             <div className="container two-column">
-              <SectionHeading eyebrow="Experience" title="Applied work" />
+              <SectionHeading
+                eyebrow={t.home.experience.label}
+                title={t.home.experience.title}
+              />
               <article className="experience-card">
-                <p>
-                  Experience developing and supporting technology solutions in
-                  an institutional environment.
-                </p>
+                <p>{t.home.experience.body}</p>
               </article>
             </div>
           </section>
@@ -92,12 +90,16 @@ export default function PortfolioPage() {
           <section className="section" id="proyectos">
             <div className="container">
               <SectionHeading
-                eyebrow="Featured projects"
-                title="Products and technical projects"
+                eyebrow={t.home.projects.label}
+                title={t.home.projects.title}
               />
               <div className="projects-grid">
-                {featuredProjects.map((project) => (
-                  <ProjectCard key={project.title} project={project} />
+                {t.projects.map((project) => (
+                  <ProjectCard
+                    key={project.title}
+                    project={project}
+                    stackLabel={t.projectCard.stackAria}
+                  />
                 ))}
               </div>
             </div>
@@ -108,11 +110,11 @@ export default function PortfolioPage() {
           <section className="section muted-section" id="habilidades">
             <div className="container">
               <SectionHeading
-                eyebrow="Skills"
-                title="Technical toolkit"
+                eyebrow={t.home.skills.label}
+                title={t.home.skills.title}
               />
               <div className="skills-grid">
-                {skillGroups.map((group) => (
+                {t.skills.map((group) => (
                   <SkillGroup
                     key={group.title}
                     title={group.title}
@@ -127,18 +129,21 @@ export default function PortfolioPage() {
         <RevealOnScroll>
           <section className="section contact-section" id="contacto">
             <div className="container contact-grid">
-              <SectionHeading eyebrow="Contact" title="Public details" />
+              <SectionHeading
+                eyebrow={t.home.contact.label}
+                title={t.home.contact.title}
+              />
               <div className="contact-card">
                 <dl>
                   <div>
-                    <dt>Location</dt>
-                    <dd>La Paz, Bolivia</dd>
+                    <dt>{t.home.contact.locationLabel}</dt>
+                    <dd>{t.shared.location}</dd>
                   </div>
                   <div>
-                    <dt>GitHub</dt>
+                    <dt>{t.home.contact.githubLabel}</dt>
                     <dd>
                       <a
-                        href="https://github.com/kevollex"
+                        href={t.shared.githubUrl}
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -147,14 +152,15 @@ export default function PortfolioPage() {
                     </dd>
                   </div>
                   <div>
-                    <dt>Email</dt>
-                    <dd>To be added</dd>
-                  </div>
-                  <div>
-                    <dt>LinkedIn</dt>
-                    <dd>To be added</dd>
+                    <dt>{t.home.contact.emailLabel}</dt>
+                    <dd>
+                      <a href={emailHref}>{t.shared.email}</a>
+                    </dd>
                   </div>
                 </dl>
+                <a className="text-link contact-cta" href={emailHref}>
+                  {t.home.contact.emailCta}
+                </a>
               </div>
             </div>
           </section>
