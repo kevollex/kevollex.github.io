@@ -17,18 +17,18 @@ export default function PortfolioPage() {
               <p className="eyebrow">La Paz, Bolivia · Frontend · Full Stack</p>
               <h1>Kevin Herrera Oropeza</h1>
               <p className="hero-subtitle">
-                Ingeniero de Sistemas y desarrollador de software.
+                Systems Engineer and Software Developer.
               </p>
               <p className="hero-description">
-                Construyo soluciones web modernas con TypeScript, React y .NET,
-                combinando interfaces cuidadas con una base técnica sólida.
+                I build modern web solutions with TypeScript, React and .NET,
+                combining thoughtful interfaces with a solid technical foundation.
               </p>
-              <div className="hero-actions" aria-label="Acciones principales">
+              <div className="hero-actions" aria-label="Primary actions">
                 <a className="button primary" href="#proyectos">
-                  Ver proyectos
+                  View projects
                 </a>
                 <a className="button secondary" href="#sobre-mi">
-                  Conocer mi perfil
+                  About me
                 </a>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function PortfolioPage() {
           <section className="section compact-section" aria-labelledby="tecnologias">
             <div className="container">
               <h2 id="tecnologias" className="sr-only">
-                Tecnologías
+                Technologies
               </h2>
               <ul className="tech-strip">
                 {technologies.map((technology) => (
@@ -61,14 +61,13 @@ export default function PortfolioPage() {
         <RevealOnScroll>
           <section className="section" id="sobre-mi">
             <div className="container two-column">
-              <SectionHeading eyebrow="Sobre mí" title="Perfil profesional" />
+              <SectionHeading eyebrow="About" title="Professional profile" />
               <div className="content-block">
                 <p>
-                  Soy Ingeniero de Sistemas y desarrollador de software con
-                  orientación frontend y full stack. Tengo experiencia
-                  construyendo soluciones web y me interesa crear interfaces
-                  cuidadas, aplicaciones útiles y productos con una base técnica
-                  clara.
+                  I am a Systems Engineer and software developer with a frontend
+                  and full stack focus. I have experience building web solutions
+                  and I am interested in thoughtful interfaces, useful
+                  applications and products with a clear technical foundation.
                 </p>
               </div>
             </div>
@@ -78,12 +77,11 @@ export default function PortfolioPage() {
         <RevealOnScroll>
           <section className="section muted-section" id="experiencia">
             <div className="container two-column">
-              <SectionHeading eyebrow="Experiencia" title="Trabajo aplicado" />
-              {/* Esta sección se completará posteriormente con empresa, rol y fechas. */}
+              <SectionHeading eyebrow="Experience" title="Applied work" />
               <article className="experience-card">
                 <p>
-                  “Experiencia desarrollando y dando soporte a soluciones
-                  tecnológicas en un entorno institucional.”
+                  Experience developing and supporting technology solutions in
+                  an institutional environment.
                 </p>
               </article>
             </div>
@@ -94,9 +92,8 @@ export default function PortfolioPage() {
           <section className="section" id="proyectos">
             <div className="container">
               <SectionHeading
-                eyebrow="Proyectos destacados"
-                title="Casos y prácticas técnicas"
-                description="Selección inicial de trabajos para revisión pública, sin enlaces ni capturas externas todavía."
+                eyebrow="Featured projects"
+                title="Products and technical projects"
               />
               <div className="projects-grid">
                 {featuredProjects.map((project) => (
@@ -111,9 +108,8 @@ export default function PortfolioPage() {
           <section className="section muted-section" id="habilidades">
             <div className="container">
               <SectionHeading
-                eyebrow="Habilidades"
-                title="Stack de trabajo"
-                description="Tecnologías organizadas por área, sin porcentajes ni niveles inventados."
+                eyebrow="Skills"
+                title="Technical toolkit"
               />
               <div className="skills-grid">
                 {skillGroups.map((group) => (
@@ -131,26 +127,32 @@ export default function PortfolioPage() {
         <RevealOnScroll>
           <section className="section contact-section" id="contacto">
             <div className="container contact-grid">
-              <SectionHeading eyebrow="Contacto" title="Datos públicos" />
+              <SectionHeading eyebrow="Contact" title="Public details" />
               <div className="contact-card">
                 <dl>
                   <div>
-                    <dt>Ubicación</dt>
+                    <dt>Location</dt>
                     <dd>La Paz, Bolivia</dd>
                   </div>
                   <div>
                     <dt>GitHub</dt>
                     <dd>
-                      <a href="https://github.com/kevollex">kevollex</a>
+                      <a
+                        href="https://github.com/kevollex"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        kevollex
+                      </a>
                     </dd>
                   </div>
                   <div>
-                    <dt>Correo</dt>
-                    <dd>Pendiente de agregar</dd>
+                    <dt>Email</dt>
+                    <dd>To be added</dd>
                   </div>
                   <div>
                     <dt>LinkedIn</dt>
-                    <dd>Pendiente de agregar</dd>
+                    <dd>To be added</dd>
                   </div>
                 </dl>
               </div>

@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <p>Kevin Herrera Oropeza</p>
-        <span>Ingeniero de Sistemas y desarrollador de software.</span>
+        <span>Systems Engineer and Software Developer.</span>
       </div>
     </footer>
   )

@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const navLinks = [
-  { label: 'Sobre mí', href: '/#sobre-mi' },
-  { label: 'Experiencia', href: '/#experiencia' },
-  { label: 'Proyectos', href: '/#proyectos' },
-  { label: 'Habilidades', href: '/#habilidades' },
-  { label: 'Contacto', href: '/#contacto' },
+  { label: 'About', href: '/#sobre-mi' },
+  { label: 'Experience', href: '/#experiencia' },
+  { label: 'Projects', href: '/#proyectos' },
+  { label: 'Skills', href: '/#habilidades' },
+  { label: 'Contact', href: '/#contacto' },
 ]
 
 export default function Navbar() {
@@ -24,8 +24,8 @@ export default function Navbar() {
 
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
-      <nav className="navbar" aria-label="Navegación principal">
-        <Link className="brand" to="/" aria-label="Ir al inicio" onClick={() => setIsOpen(false)}>
+      <nav className="navbar" aria-label="Main navigation">
+        <Link className="brand" to="/" aria-label="Go to homepage" onClick={() => setIsOpen(false)}>
           <span>Kevin Herrera</span>
           <small>Software Developer</small>
         </Link>
@@ -33,7 +33,7 @@ export default function Navbar() {
         <button
           className="menu-toggle"
           type="button"
-          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isOpen}
           aria-controls="main-menu"
           onClick={() => setIsOpen((value) => !value)}
@@ -54,7 +54,7 @@ export default function Navbar() {
             ))}
           </ul>
           <button className="cv-button" type="button" disabled>
-            CV próximamente
+            CV coming soon
           </button>
         </div>
       </nav>

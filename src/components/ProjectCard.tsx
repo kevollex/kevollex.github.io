@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p>{project.description}</p>
       </div>
 
-      <ul className="tag-list" aria-label={`Stack de ${project.title}`}>
+      <ul className="tag-list" aria-label={`${project.title} stack`}>
         {project.stack.map((item) => (
           <li key={item}>{item}</li>
         ))}
@@ -26,6 +26,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <Link className="text-link" to={project.route}>
           {project.cta}
         </Link>
+      ) : null}
+
+      {project.url && project.cta ? (
+        <a
+          className="text-link"
+          href={project.url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${project.cta}: ${project.title}`}
+        >
+          {project.cta}
+        </a>
       ) : null}
     </article>
   )

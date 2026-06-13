@@ -19,20 +19,20 @@ const stack = [
 ]
 
 const features = [
-  'autenticación basada en roles',
-  'gestión de evaluaciones',
-  'seguimiento por curso',
-  'perfil de estudiante',
-  'resultados y análisis gráfico',
-  'exportación a Excel',
-  'documentos PDF privados',
-  'experiencia responsive para estudiantes',
+  'role-based authentication',
+  'assessment management',
+  'course-level tracking',
+  'student profiles',
+  'results and visual analysis',
+  'Excel exports',
+  'private PDF documents',
+  'responsive student experience',
 ]
 
 const complements = [
-  'autenticación JWT',
-  'almacenamiento privado de PDFs',
-  'despliegue con Docker',
+  'JWT authentication',
+  'Private PDF storage',
+  'Docker deployment',
 ]
 
 export default function VocationalGuidanceCaseStudy() {
@@ -42,15 +42,14 @@ export default function VocationalGuidanceCaseStudy() {
         <section className="case-hero">
           <div className="container">
             <Link className="back-link" to="/">
-              Volver al portafolio
+              Back to portfolio
             </Link>
-            <p className="eyebrow">Caso de estudio</p>
-            <h1>Plataforma de Orientación Vocacional</h1>
+            <p className="eyebrow">Case study</p>
+            <h1>Vocational Guidance Platform</h1>
             <p>
-              Plataforma web desarrollada para digitalizar el proceso de
-              orientación vocacional, facilitando la aplicación de evaluaciones,
-              el seguimiento de estudiantes y la gestión de resultados por parte
-              del área de Psicología.
+              Web platform developed to digitize the vocational guidance
+              process, making it easier to administer assessments, track
+              students and manage results for the Psychology department.
             </p>
           </div>
         </section>
@@ -59,19 +58,19 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section">
             <div className="container case-grid">
               <article className="case-card">
-                <h2>Problema</h2>
+                <h2>Problem</h2>
                 <p>
-                  El proceso de orientación vocacional requería una solución web
-                  que ayudara a organizar evaluaciones, estudiantes, resultados y
-                  documentos de forma más clara para su revisión interna.
+                  The vocational guidance process needed a web solution to
+                  organize assessments, students, results and documents more
+                  clearly for internal review.
                 </p>
               </article>
               <article className="case-card">
-                <h2>Solución</h2>
+                <h2>Solution</h2>
                 <p>
-                  Se planteó una plataforma full stack con flujos diferenciados,
-                  gestión de evaluaciones, seguimiento por curso y resultados
-                  consultables desde una interfaz responsive.
+                  The solution was a full stack platform with differentiated
+                  flows, assessment management, course-level tracking and
+                  results available through a responsive interface.
                 </p>
               </article>
             </div>
@@ -82,15 +81,15 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section muted-section">
             <div className="container two-column">
               <SectionHeading
-                eyebrow="Mi contribución"
-                title="Implementación full stack"
+                eyebrow="My contribution"
+                title="Full stack implementation"
               />
               <div className="content-block">
                 <p>
-                  Diseñé e implementé una solución full stack con autenticación
-                  basada en roles, gestión de evaluaciones, seguimiento por
-                  curso, visualización de resultados, exportación a Excel y
-                  almacenamiento privado de documentos PDF.
+                  I designed and implemented a full stack solution with
+                  role-based authentication, assessment management, course-level
+                  tracking, results visualization, Excel exports and private PDF
+                  document storage.
                 </p>
               </div>
             </div>
@@ -100,7 +99,7 @@ export default function VocationalGuidanceCaseStudy() {
         <RevealOnScroll>
           <section className="section">
             <div className="container">
-              <SectionHeading eyebrow="Stack" title="Tecnologías utilizadas" />
+              <SectionHeading eyebrow="Stack" title="Technology stack" />
               <ul className="tag-list large-tags">
                 {stack.map((item) => (
                   <li key={item}>{item}</li>
@@ -114,9 +113,8 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section muted-section">
             <div className="container architecture-grid">
               <SectionHeading
-                eyebrow="Arquitectura simplificada"
-                title="Flujo general"
-                description="Sin IPs, dominios, puertos, rutas internas ni configuración real."
+                eyebrow="Architecture"
+                title="High-level architecture"
               />
               <ArchitectureDiagram />
               <ul className="complement-list">
@@ -132,8 +130,8 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section">
             <div className="container">
               <SectionHeading
-                eyebrow="Funcionalidades"
-                title="Alcance principal"
+                eyebrow="Features"
+                title="Core scope"
               />
               <ul className="feature-grid">
                 {features.map((feature) => (
@@ -148,17 +146,17 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section muted-section">
             <div className="container case-grid">
               <article className="case-card">
-                <h2>Retos técnicos</h2>
+                <h2>Technical challenges</h2>
                 <p>
-                  Separar responsabilidades entre interfaz, API, datos y
-                  documentos privados, manteniendo una experiencia clara para
-                  perfiles de usuario distintos.
+                  Separating responsibilities across the interface, API, data
+                  layer and private documents while maintaining a clear
+                  experience for different user profiles.
                 </p>
               </article>
               <PrivacyNotice>
-                El código fuente y los datos operativos se mantienen privados
-                por confidencialidad. Las capturas públicas utilizan
-                exclusivamente información ficticia preparada para demostración.
+                The source code and operational data remain private due to
+                confidentiality requirements. Public screenshots use fictional
+                demonstration data exclusively.
               </PrivacyNotice>
             </div>
           </section>
@@ -168,9 +166,8 @@ export default function VocationalGuidanceCaseStudy() {
           <section className="section">
             <div className="container">
               <SectionHeading
-                eyebrow="Galería"
-                title="Placeholders de capturas"
-                description="Rutas preparadas para reemplazo posterior con imágenes demo."
+                eyebrow="Gallery"
+                title="Screenshot placeholders"
               />
               <ScreenshotGallery items={orientationGallery} />
             </div>

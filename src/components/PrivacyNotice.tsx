@@ -5,7 +5,7 @@ type PrivacyNoticeProps = {
 export default function PrivacyNotice({ children }: PrivacyNoticeProps) {
   return (
     <aside className="privacy-notice">
-      <strong>Nota de privacidad</strong>
+      <strong>Privacy notice</strong>
       <p>{children}</p>
     </aside>
   )

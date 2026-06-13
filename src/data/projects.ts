@@ -5,43 +5,50 @@ export type Project = {
   status?: string
   cta?: string
   route?: string
+  url?: string
   note?: string
 }
 
 export const featuredProjects: Project[] = [
   {
-    title: 'Plataforma de Orientación Vocacional',
+    title: 'Vocational Guidance Platform',
     description:
-      'Plataforma web para digitalizar evaluaciones vocacionales, seguimiento de estudiantes y gestión de resultados por parte del área de Psicología.',
+      'Web platform designed to digitize vocational assessments, student tracking and results management for the Psychology department.',
     stack: ['React', 'TypeScript', '.NET', 'SQL Server', 'Docker', 'JWT'],
-    status: 'Caso de estudio',
-    cta: 'Ver caso de estudio',
+    status: 'Case study',
+    cta: 'View case study',
     route: '/proyectos/orientacion-vocacional',
   },
   {
     title: 'MonteApp',
     description:
-      'Aplicación web progresiva orientada a centralizar información académica y comunicaciones institucionales desde dispositivos móviles.',
+      'Progressive web application designed to centralize academic information and institutional communications on mobile devices.',
     stack: ['TypeScript', 'Lit', 'Vite', '.NET', 'SQL Server', 'Redis', 'JWT'],
-    note: 'Proyecto desarrollado y supervisado en un contexto institucional. El código fuente, los datos operativos y las capturas se mantienen privados por confidencialidad.',
+    note: 'Developed and supervised in an institutional context. The source code, operational data and screenshots remain private due to confidentiality requirements.',
   },
   {
     title: 'Job Tracker',
     description:
-      'Aplicación para organizar y dar seguimiento a postulaciones laborales.',
+      'Application for organizing and tracking job applications.',
     stack: ['React', 'TypeScript'],
+    cta: 'View repository',
+    url: 'https://github.com/kevollex/frontend-job-tracker',
   },
   {
     title: 'GitHub Repository Explorer',
     description:
-      'Aplicación para explorar repositorios y practicar integración con servicios web.',
+      'Application for exploring GitHub repositories, filtering results and practicing web service integration.',
     stack: ['React', 'TypeScript'],
+    cta: 'View repository',
+    url: 'https://github.com/kevollex/github-repository-explorer',
   },
   {
-    title: 'Tipos y pruebas TypeScript',
+    title: 'TypeScript Types and Testing',
     description:
-      'Proyecto técnico enfocado en tipado estático, validaciones y pruebas automatizadas.',
+      'Technical project focused on static typing, validations and automated tests.',
     stack: ['TypeScript', 'Vitest'],
+    cta: 'View repository',
+    url: 'https://github.com/kevollex/typescript-testing-lab',
   },
 ]
 
@@ -61,10 +68,10 @@ export const skillGroups = [
   },
   {
     title: 'Backend',
-    skills: ['.NET', 'API REST', 'JWT', 'SQL Server'],
+    skills: ['.NET', 'REST API', 'JWT', 'SQL Server'],
   },
   {
-    title: 'Herramientas',
+    title: 'Tools',
     skills: ['Git', 'GitHub', 'Docker', 'CI/CD'],
   },
 ]

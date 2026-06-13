@@ -8,69 +8,69 @@ export type GalleryItem = {
 export const orientationGallery: GalleryItem[] = [
   {
     number: '02',
-    title: 'Panel de Psicología',
-    caption: 'Vista de trabajo para seguimiento y gestión de evaluaciones.',
+    title: 'Psychology dashboard',
+    caption: 'Work view for assessment tracking and management.',
     assetPath: '/assets/projects/orientacion-vocacional/02-panel-psicologia.png',
   },
   {
     number: '03',
-    title: 'Cursos demo',
-    caption: 'Organización de estudiantes por curso con información ficticia.',
+    title: 'Demo courses',
+    caption: 'Student organization by course using fictional information.',
     assetPath: '/assets/projects/orientacion-vocacional/03-cursos-demo.png',
   },
   {
     number: '04',
-    title: 'Estudiantes por curso',
-    caption: 'Listado de estudiantes preparado para una demostración pública.',
+    title: 'Students by course',
+    caption: 'Student list prepared for a public demonstration.',
     assetPath:
       '/assets/projects/orientacion-vocacional/04-estudiantes-curso-demo.png',
   },
   {
     number: '05',
-    title: 'Perfil de estudiante',
-    caption: 'Resumen individual con datos ficticios y estado de evaluaciones.',
+    title: 'Student profile',
+    caption: 'Individual summary with fictional data and assessment status.',
     assetPath:
       '/assets/projects/orientacion-vocacional/05-perfil-estudiante-demo.png',
   },
   {
     number: '06',
-    title: 'Tests pendientes',
-    caption: 'Interfaz de actividades pendientes para estudiantes.',
+    title: 'Pending assessments',
+    caption: 'Pending activity interface for students.',
     assetPath:
       '/assets/projects/orientacion-vocacional/06-tests-pendientes-demo.png',
   },
   {
     number: '07',
     title: 'Ranking IPP-R',
-    caption: 'Representación de resultados preparada para revisión visual.',
+    caption: 'Results representation prepared for visual review.',
     assetPath:
       '/assets/projects/orientacion-vocacional/07-resultados-ipp-r-ranking.png',
   },
   {
     number: '08',
-    title: 'Análisis gráfico IPP-R',
-    caption: 'Espacio reservado para visualizaciones y análisis gráfico.',
+    title: 'IPP-R visual analysis',
+    caption: 'Reserved area for visualizations and graphical analysis.',
     assetPath:
       '/assets/projects/orientacion-vocacional/08-analisis-grafico-ipp-r.png',
   },
   {
     number: '09',
-    title: 'Home estudiante',
-    caption: 'Pantalla de inicio del flujo estudiantil con contenido demo.',
+    title: 'Student home',
+    caption: 'Home screen for the student flow with demo content.',
     assetPath:
       '/assets/projects/orientacion-vocacional/09-home-estudiante-demo.png',
   },
   {
     number: '10',
-    title: 'Documentos de resultados',
-    caption: 'Vista conceptual para documentos PDF privados.',
+    title: 'Results documents',
+    caption: 'Conceptual view for private PDF documents.',
     assetPath:
       '/assets/projects/orientacion-vocacional/10-documentos-resultados-demo.png',
   },
   {
     number: '11',
     title: 'Responsive mobile',
-    caption: 'Placeholder para revisión de experiencia móvil de estudiante.',
+    caption: 'Placeholder for reviewing the student mobile experience.',
     assetPath:
       '/assets/projects/orientacion-vocacional/11-home-estudiante-responsive-mobile.png',
   },
