@@ -48,4 +48,15 @@ npm run build
 
 ## Deployment
 
-Deployment will be configured later.
+Deployment is prepared for GitHub Pages using the workflow at
+`.github/workflows/deploy-pages.yml`.
+
+The workflow runs on pushes to `main` and can also be started manually from
+GitHub Actions. It installs dependencies with `npm ci`, runs linting, builds the
+site and deploys the generated `dist` directory through GitHub Pages.
+
+Expected public URL:
+
+```text
+https://kevollex.github.io
+```

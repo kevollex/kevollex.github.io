@@ -8,6 +8,16 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      ;(() => {
+        const fallbackPath = sessionStorage.getItem('spa-fallback-path')
+
+        if (fallbackPath) {
+          sessionStorage.removeItem('spa-fallback-path')
+          window.history.replaceState(null, '', fallbackPath)
+        }
+      })()
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
