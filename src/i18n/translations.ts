@@ -6,8 +6,11 @@ export type ProjectTranslation = {
   stack: readonly string[]
   status?: string
   cta?: string
+  demoCta?: string
+  repositoryCta?: string
   route?: string
   url?: string
+  demoUrl?: string
   note?: string
 }
 
@@ -124,7 +127,9 @@ export const translations = {
         title: 'Job Tracker',
         description: 'Application for organizing and tracking job applications.',
         stack: ['React', 'TypeScript'],
-        cta: 'View repository',
+        demoCta: 'View demo',
+        repositoryCta: 'View repository',
+        demoUrl: 'https://kevollex.github.io/frontend-job-tracker/',
         url: 'https://github.com/kevollex/frontend-job-tracker',
       },
       {
@@ -132,7 +137,9 @@ export const translations = {
         description:
           'Application for exploring GitHub repositories, filtering results and practicing web service integration.',
         stack: ['React', 'TypeScript'],
-        cta: 'View repository',
+        demoCta: 'View demo',
+        repositoryCta: 'View repository',
+        demoUrl: 'https://kevollex.github.io/github-repository-explorer/',
         url: 'https://github.com/kevollex/github-repository-explorer',
       },
       {
@@ -197,14 +204,14 @@ export const translations = {
         label: 'Features',
         title: 'Core scope',
         items: [
-          'role-based authentication',
-          'assessment management',
-          'course-level tracking',
-          'student profiles',
-          'results and visual analysis',
+          'Role-based authentication',
+          'Assessment management',
+          'Course-level tracking',
+          'Student profiles',
+          'Results and visual analysis',
           'Excel exports',
-          'private PDF documents',
-          'responsive student experience',
+          'Private PDF documents',
+          'Responsive student experience',
         ],
       },
       challenges: {
@@ -390,7 +397,9 @@ export const translations = {
         description:
           'Aplicación para organizar y dar seguimiento a postulaciones laborales.',
         stack: ['React', 'TypeScript'],
-        cta: 'Ver repositorio',
+        demoCta: 'Ver demo',
+        repositoryCta: 'Ver repositorio',
+        demoUrl: 'https://kevollex.github.io/frontend-job-tracker/',
         url: 'https://github.com/kevollex/frontend-job-tracker',
       },
       {
@@ -398,7 +407,9 @@ export const translations = {
         description:
           'Aplicación para explorar repositorios de GitHub, filtrar resultados y practicar la integración con servicios web.',
         stack: ['React', 'TypeScript'],
-        cta: 'Ver repositorio',
+        demoCta: 'Ver demo',
+        repositoryCta: 'Ver repositorio',
+        demoUrl: 'https://kevollex.github.io/github-repository-explorer/',
         url: 'https://github.com/kevollex/github-repository-explorer',
       },
       {
@@ -463,14 +474,14 @@ export const translations = {
         label: 'Funcionalidades',
         title: 'Alcance principal',
         items: [
-          'autenticación basada en roles',
-          'gestión de evaluaciones',
-          'seguimiento por curso',
-          'perfiles de estudiantes',
-          'resultados y análisis gráfico',
-          'exportación a Excel',
-          'documentos PDF privados',
-          'experiencia responsive para estudiantes',
+          'Autenticación basada en roles',
+          'Gestión de evaluaciones',
+          'Seguimiento por curso',
+          'Perfiles de estudiantes',
+          'Resultados y análisis visual',
+          'Exportación a Excel',
+          'Documentos PDF privados',
+          'Experiencia responsive para estudiantes',
         ],
       },
       challenges: {

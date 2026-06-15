@@ -7,6 +7,8 @@ type ProjectCardProps = {
 }
 
 export default function ProjectCard({ project, stackLabel }: ProjectCardProps) {
+  const hasActions = Boolean(project.route || project.demoUrl || project.url)
+
   return (
     <article className="project-card">
       <div>
@@ -23,22 +25,38 @@ export default function ProjectCard({ project, stackLabel }: ProjectCardProps) {
 
       {project.note ? <p className="project-note">{project.note}</p> : null}
 
-      {project.route && project.cta ? (
-        <Link className="text-link" to={project.route}>
-          {project.cta}
-        </Link>
-      ) : null}
+      {hasActions ? (
+        <div className="project-actions">
+        {project.route && project.cta ? (
+          <Link className="text-link" to={project.route}>
+            {project.cta}
+          </Link>
+        ) : null}
 
-      {project.url && project.cta ? (
-        <a
-          className="text-link"
-          href={project.url}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`${project.cta}: ${project.title}`}
-        >
-          {project.cta}
-        </a>
+        {project.demoUrl && project.demoCta ? (
+          <a
+            className="text-link"
+            href={project.demoUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={project.demoCta + ': ' + project.title}
+          >
+            {project.demoCta}
+          </a>
+        ) : null}
+
+        {project.url && (project.repositoryCta || project.cta) ? (
+          <a
+            className="text-link"
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={(project.repositoryCta || project.cta) + ': ' + project.title}
+          >
+            {project.repositoryCta || project.cta}
+          </a>
+        ) : null}
+        </div>
       ) : null}
     </article>
   )
