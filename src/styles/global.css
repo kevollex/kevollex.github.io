@@ -86,6 +86,7 @@ img {
 }
 
 .navbar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,6 +130,13 @@ img {
   display: flex;
   align-items: center;
   gap: 18px;
+  margin-left: auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-links {
@@ -163,9 +171,15 @@ img {
 .cv-button {
   padding: 0 14px;
   border: 1px solid var(--line);
-  color: #7b8490;
-  background: #f0f2f4;
-  cursor: not-allowed;
+  color: var(--navy);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.cv-button:hover {
+  color: #ffffff;
+  background: var(--navy);
+  border-color: var(--navy);
 }
 
 .language-toggle {
@@ -834,6 +848,7 @@ h1 {
     padding: 12px;
     background: #ffffff;
     box-shadow: var(--shadow);
+    margin-left: 0;
   }
 
   .nav-panel.is-open {
@@ -845,18 +860,12 @@ h1 {
   }
 
   .nav-links a,
-  .cv-button,
-  .language-toggle {
+  .cv-button {
     width: 100%;
   }
 
-  .language-toggle {
-    justify-content: stretch;
-  }
-
-  .language-toggle button {
-    flex: 1;
-    justify-content: flex-start;
+  .cv-button {
+    justify-content: center;
   }
 
   .hero-layout,
@@ -899,16 +908,94 @@ h1 {
     width: min(100% - 28px, 1120px);
   }
 
+  .site-header {
+    top: 10px;
+  }
+
   .navbar {
     width: min(100% - 20px, 1120px);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .brand small {
+    font-size: 0.7rem;
+  }
+
+  .nav-actions {
+    flex: 0 0 auto;
+    gap: 8px;
+  }
+
+  .language-toggle button {
+    min-height: 32px;
+    padding: 0 8px;
+    font-size: 0.82rem;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
   }
 
   .hero-section {
-    padding-bottom: 64px;
+    padding-bottom: 72px;
   }
 
   .section {
-    padding: 68px 0;
+    border-top: 1px solid rgb(13 43 69 / 10%);
+    padding: 78px 0;
+  }
+
+  .compact-section {
+    padding-top: 34px;
+    padding-bottom: 78px;
+  }
+
+  .muted-section {
+    background: #eef0f2;
+  }
+
+  .section-heading {
+    margin-bottom: 26px;
+  }
+
+  .content-block,
+  .experience-card,
+  .contact-card,
+  .case-card,
+  .privacy-notice,
+  .skill-group,
+  .project-card {
+    box-shadow: 0 12px 28px rgb(16 33 48 / 7%);
+  }
+
+  .content-block,
+  .experience-card,
+  .contact-card,
+  .case-card,
+  .privacy-notice,
+  .skill-group,
+  .project-card {
+    padding: 24px;
+  }
+
+  .projects-grid,
+  .skills-grid,
+  .case-grid,
+  .gallery-grid {
+    gap: 22px;
   }
 
   .hero-actions,

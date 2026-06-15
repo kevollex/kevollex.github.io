@@ -30,19 +30,6 @@ export default function Navbar() {
           <small>{t.nav.brandRole}</small>
         </Link>
 
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-label={isOpen ? t.nav.menuClose : t.nav.menuOpen}
-          aria-expanded={isOpen}
-          aria-controls="main-menu"
-          onClick={() => setIsOpen((value) => !value)}
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
-
         <div id="main-menu" className={`nav-panel ${isOpen ? 'is-open' : ''}`}>
           <ul className="nav-links">
             {t.nav.links.map((link) => (
@@ -53,9 +40,18 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <button className="cv-button" type="button" disabled>
+          <a
+            className="cv-button"
+            href="/assets/resume/kevin-herrera-oropeza-resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setIsOpen(false)}
+          >
             {t.nav.cv}
-          </button>
+          </a>
+        </div>
+
+        <div className="nav-actions">
           <div className="language-toggle" aria-label={t.nav.languageAria}>
             {(['en', 'es'] as Language[]).map((option) => (
               <button
@@ -69,6 +65,19 @@ export default function Navbar() {
               </button>
             ))}
           </div>
+
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-label={isOpen ? t.nav.menuClose : t.nav.menuOpen}
+            aria-expanded={isOpen}
+            aria-controls="main-menu"
+            onClick={() => setIsOpen((value) => !value)}
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
         </div>
       </nav>
     </header>
