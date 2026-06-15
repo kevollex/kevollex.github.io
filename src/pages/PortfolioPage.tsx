@@ -8,7 +8,11 @@ import { useLanguage } from '../i18n/useLanguage'
 
 export default function PortfolioPage() {
   const { t } = useLanguage()
-  const emailHref = `mailto:${t.shared.email}`
+  const emailHref = 'mailto:' + t.shared.email
+  const whatsappHref =
+    t.shared.whatsappUrl +
+    '?text=' +
+    encodeURIComponent(t.home.contact.whatsappMessage)
 
   return (
     <>
@@ -33,12 +37,14 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            <div className="hero-visual" aria-hidden="true">
-              <div className="visual-panel">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+            <div className="hero-visual">
+              <figure className="visual-panel profile-panel">
+                <img
+                  src="/assets/profile/kevin-herrera-profile.png"
+                  alt="Kevin Herrera Oropeza"
+                  className="profile-photo"
+                />
+              </figure>
             </div>
           </div>
         </section>
@@ -148,6 +154,30 @@ export default function PortfolioPage() {
                         rel="noreferrer"
                       >
                         kevollex
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>{t.home.contact.linkedinLabel}</dt>
+                    <dd>
+                      <a
+                        href={t.shared.linkedinUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        kevin-herrera-oropeza
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>{t.home.contact.whatsappLabel}</dt>
+                    <dd>
+                      <a
+                        href={whatsappHref}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t.home.contact.whatsappCta}
                       </a>
                     </dd>
                   </div>

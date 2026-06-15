@@ -21,6 +21,8 @@ export type GalleryTranslation = {
 const shared = {
   email: 'kevinho216@gmail.com',
   githubUrl: 'https://github.com/kevollex',
+  linkedinUrl: 'https://www.linkedin.com/in/kevin-herrera-oropeza/',
+  whatsappUrl: 'https://wa.me/59170533229',
   location: 'La Paz, Bolivia',
   technologies: ['TypeScript', 'React', '.NET', 'SQL Server', 'Docker', 'Git'],
   stack: [
@@ -63,16 +65,16 @@ export const translations = {
         title: 'Kevin Herrera Oropeza',
         subtitle: 'Systems Engineer and Software Developer.',
         description:
-          'I build modern web solutions with TypeScript, React and .NET, combining thoughtful interfaces with a solid technical foundation.',
+          'Modern web solutions with TypeScript, React and .NET, focused on thoughtful interfaces, reliable backend foundations and practical products.',
         actionsAria: 'Primary actions',
         projectsCta: 'View projects',
-        aboutCta: 'About me',
+        aboutCta: 'View profile',
       },
       technologiesLabel: 'Technologies',
       about: {
         label: 'About',
         title: 'Professional profile',
-        body: 'I am a Systems Engineer and software developer with a frontend and full stack focus. I have experience building web solutions and I am interested in thoughtful interfaces, useful applications and products with a clear technical foundation.',
+        body: 'Systems Engineer and software developer with a frontend and full stack focus. Experience building web solutions with thoughtful interfaces, useful applications and a clear technical foundation.',
       },
       experience: {
         label: 'Experience',
@@ -92,6 +94,11 @@ export const translations = {
         title: 'Public details',
         locationLabel: 'Location',
         githubLabel: 'GitHub',
+        linkedinLabel: 'LinkedIn',
+        whatsappLabel: 'WhatsApp',
+        whatsappCta: 'Chat on WhatsApp',
+        whatsappMessage:
+          'Hello Kevin, I found your portfolio and would like to get in touch.',
         emailLabel: 'Email',
         emailCta: 'Send email',
       },
@@ -166,9 +173,9 @@ export const translations = {
         body: 'The solution was a full stack platform with differentiated flows, assessment management, course-level tracking and results available through a responsive interface.',
       },
       contribution: {
-        label: 'My contribution',
+        label: 'Contribution',
         title: 'Full stack implementation',
-        body: 'I designed and implemented a full stack solution with role-based authentication, assessment management, course-level tracking, results visualization, Excel exports and private PDF document storage.',
+        body: 'Full stack implementation of a solution with role-based authentication, assessment management, course-level tracking, results visualization, Excel exports and private PDF document storage.',
       },
       stack: {
         label: 'Stack',
@@ -323,16 +330,16 @@ export const translations = {
         title: 'Kevin Herrera Oropeza',
         subtitle: 'Ingeniero de Sistemas y desarrollador de software.',
         description:
-          'Construyo soluciones web modernas con TypeScript, React y .NET, combinando interfaces cuidadas con una base técnica sólida.',
+          'Soluciones web modernas con TypeScript, React y .NET, enfocadas en interfaces cuidadas, bases backend sólidas y productos útiles.',
         actionsAria: 'Acciones principales',
         projectsCta: 'Ver proyectos',
-        aboutCta: 'Conocer mi perfil',
+        aboutCta: 'Ver perfil',
       },
       technologiesLabel: 'Tecnologías',
       about: {
         label: 'Sobre mí',
         title: 'Perfil profesional',
-        body: 'Soy Ingeniero de Sistemas y desarrollador de software con orientación frontend y full stack. Tengo experiencia construyendo soluciones web y me interesa crear interfaces cuidadas, aplicaciones útiles y productos con una base técnica clara.',
+        body: 'Ingeniero de Sistemas y desarrollador de software con orientación frontend y full stack. Experiencia construyendo soluciones web con interfaces cuidadas, aplicaciones útiles y una base técnica clara.',
       },
       experience: {
         label: 'Experiencia',
@@ -352,6 +359,11 @@ export const translations = {
         title: 'Datos públicos',
         locationLabel: 'Ubicación',
         githubLabel: 'GitHub',
+        linkedinLabel: 'LinkedIn',
+        whatsappLabel: 'WhatsApp',
+        whatsappCta: 'Abrir WhatsApp',
+        whatsappMessage:
+          'Hola Kevin, vi tu portafolio y me gustaría ponerme en contacto contigo.',
         emailLabel: 'Correo',
         emailCta: 'Enviar correo',
       },
@@ -427,9 +439,9 @@ export const translations = {
         body: 'Se planteó una plataforma full stack con flujos diferenciados, gestión de evaluaciones, seguimiento por curso y resultados consultables desde una interfaz responsive.',
       },
       contribution: {
-        label: 'Mi contribución',
+        label: 'Contribución',
         title: 'Implementación full stack',
-        body: 'Diseñé e implementé una solución full stack con autenticación basada en roles, gestión de evaluaciones, seguimiento por curso, visualización de resultados, exportación a Excel y almacenamiento privado de documentos PDF.',
+        body: 'Implementación full stack de una solución con autenticación basada en roles, gestión de evaluaciones, seguimiento por curso, visualización de resultados, exportación a Excel y almacenamiento privado de documentos PDF.',
       },
       stack: {
         label: 'Stack',
