@@ -27,35 +27,35 @@ export default function ProjectCard({ project, stackLabel }: ProjectCardProps) {
 
       {hasActions ? (
         <div className="project-actions">
-        {project.route && project.cta ? (
-          <Link className="text-link" to={project.route}>
-            {project.cta}
-          </Link>
-        ) : null}
+          {project.route && project.cta ? (
+            <Link className="button project-action primary" to={project.route}>
+              {project.cta}
+            </Link>
+          ) : null}
 
-        {project.demoUrl && project.demoCta ? (
-          <a
-            className="text-link"
-            href={project.demoUrl}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={project.demoCta + ': ' + project.title}
-          >
-            {project.demoCta}
-          </a>
-        ) : null}
+          {project.demoUrl && project.demoCta ? (
+            <a
+              className="button project-action primary"
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={project.demoCta + ': ' + project.title}
+            >
+              {project.demoCta}
+            </a>
+          ) : null}
 
-        {project.url && (project.repositoryCta || project.cta) ? (
-          <a
-            className="text-link"
-            href={project.url}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={(project.repositoryCta || project.cta) + ': ' + project.title}
-          >
-            {project.repositoryCta || project.cta}
-          </a>
-        ) : null}
+          {project.url && (project.repositoryCta || project.cta) ? (
+            <a
+              className="button project-action secondary"
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={(project.repositoryCta || project.cta) + ': ' + project.title}
+            >
+              {project.repositoryCta || project.cta}
+            </a>
+          ) : null}
         </div>
       ) : null}
     </article>

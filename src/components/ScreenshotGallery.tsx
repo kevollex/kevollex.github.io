@@ -55,8 +55,10 @@ export default function ScreenshotGallery({
                 )}
               </div>
               <figcaption className="gallery-copy">
-                <span>{item.number}</span>
-                <strong>{item.title}</strong>
+                <div className="gallery-meta">
+                  <span>{item.number}</span>
+                  <strong>{item.title}</strong>
+                </div>
                 <p>{item.caption}</p>
               </figcaption>
             </figure>

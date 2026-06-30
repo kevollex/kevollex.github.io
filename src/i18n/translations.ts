@@ -193,6 +193,9 @@ export const translations = {
         label: 'Architecture',
         title: 'High-level architecture',
         aria: 'High-level architecture',
+        coreLabel: 'Core flow',
+        supportLabel: 'Supporting concerns',
+        layerLabel: 'Layer',
         layers: ['Frontend: React + TypeScript', 'REST API: .NET', 'SQL Server'],
         complements: [
           'JWT authentication',
@@ -463,6 +466,9 @@ export const translations = {
         label: 'Arquitectura',
         title: 'Arquitectura general',
         aria: 'Arquitectura general',
+        coreLabel: 'Flujo principal',
+        supportLabel: 'Complementos técnicos',
+        layerLabel: 'Capa',
         layers: ['Frontend: React + TypeScript', 'API REST: .NET', 'SQL Server'],
         complements: [
           'Autenticación JWT',

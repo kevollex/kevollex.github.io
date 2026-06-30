@@ -18,7 +18,7 @@ export default function VocationalGuidanceCaseStudy() {
       <main className="case-page">
         <section className="case-hero">
           <div className="container">
-            <Link className="back-link" to="/">
+            <Link className="back-link button secondary" to="/">
               {caseStudy.back}
             </Link>
             <p className="eyebrow">{caseStudy.label}</p>
@@ -79,15 +79,24 @@ export default function VocationalGuidanceCaseStudy() {
                 eyebrow={caseStudy.architecture.label}
                 title={caseStudy.architecture.title}
               />
-              <ArchitectureDiagram
-                ariaLabel={caseStudy.architecture.aria}
-                layers={[...caseStudy.architecture.layers]}
-              />
-              <ul className="complement-list">
-                {caseStudy.architecture.complements.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <div className="architecture-panel">
+                <ArchitectureDiagram
+                  ariaLabel={caseStudy.architecture.aria}
+                  coreLabel={caseStudy.architecture.coreLabel}
+                  layerLabel={caseStudy.architecture.layerLabel}
+                  layers={[...caseStudy.architecture.layers]}
+                />
+                <div className="architecture-support">
+                  <p className="architecture-kicker">
+                    {caseStudy.architecture.supportLabel}
+                  </p>
+                  <ul className="complement-list">
+                    {caseStudy.architecture.complements.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </section>
         </RevealOnScroll>

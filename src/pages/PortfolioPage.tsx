@@ -173,6 +173,7 @@ export default function PortfolioPage() {
                     <dt>{t.home.contact.whatsappLabel}</dt>
                     <dd>
                       <a
+                        className="contact-action-link"
                         href={whatsappHref}
                         target="_blank"
                         rel="noreferrer"
@@ -188,7 +189,7 @@ export default function PortfolioPage() {
                     </dd>
                   </div>
                 </dl>
-                <a className="text-link contact-cta" href={emailHref}>
+                <a className="button primary contact-cta" href={emailHref}>
                   {t.home.contact.emailCta}
                 </a>
               </div>
