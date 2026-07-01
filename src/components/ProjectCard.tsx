@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import type { MouseEvent } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import type { ProjectTranslation } from '../i18n/translations'
 
 type ProjectCardProps = {
@@ -7,7 +8,39 @@ type ProjectCardProps = {
 }
 
 export default function ProjectCard({ project, stackLabel }: ProjectCardProps) {
+  const navigate = useNavigate()
   const hasActions = Boolean(project.route || project.demoUrl || project.url)
+
+  function handleInternalRouteClick(event: MouseEvent<HTMLAnchorElement>) {
+    if (
+      !project.route ||
+      project.route.includes('#') ||
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.altKey ||
+      event.ctrlKey ||
+      event.shiftKey
+    ) {
+      return
+    }
+
+    event.preventDefault()
+
+    const root = document.documentElement
+    const previousScrollBehavior = root.style.scrollBehavior
+
+    root.classList.add('is-route-switching')
+    root.style.scrollBehavior = 'auto'
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+
+    navigate(project.route!)
+
+    window.setTimeout(() => {
+      root.classList.remove('is-route-switching')
+      root.style.scrollBehavior = previousScrollBehavior
+    }, 180)
+  }
 
   return (
     <article className="project-card">
@@ -28,7 +61,11 @@ export default function ProjectCard({ project, stackLabel }: ProjectCardProps) {
       {hasActions ? (
         <div className="project-actions">
           {project.route && project.cta ? (
-            <Link className="button project-action primary" to={project.route}>
+            <Link
+              className="button project-action primary"
+              to={project.route}
+              onClick={handleInternalRouteClick}
+            >
               {project.cta}
             </Link>
           ) : null}

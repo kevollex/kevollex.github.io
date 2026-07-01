@@ -17,13 +17,23 @@ export default function VocationalGuidanceCaseStudy() {
       <Navbar />
       <main className="case-page">
         <section className="case-hero">
-          <div className="container">
-            <Link className="back-link button secondary" to="/">
+          <div className="container case-hero-inner">
+            <Link className="case-back-link" to="/" state={{ scrollTo: 'projects' }}>
+              <span aria-hidden="true">←</span>
               {caseStudy.back}
             </Link>
-            <p className="eyebrow">{caseStudy.label}</p>
-            <h1>{caseStudy.title}</h1>
-            <p>{caseStudy.summary}</p>
+            <div className="case-hero-panel">
+              <div className="case-hero-content">
+                <p className="eyebrow">{caseStudy.label}</p>
+                <h1>{caseStudy.title}</h1>
+                <p className="case-hero-summary">{caseStudy.summary}</p>
+                <ul className="tag-list case-hero-stack" aria-label={caseStudy.stack.title}>
+                  {caseStudy.stack.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
